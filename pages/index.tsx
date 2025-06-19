@@ -1,18 +1,28 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { FaMobileAlt, FaTwitter, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <>
+    <div className={styles.page}>
       <Head>
-        <title>Tripar Car Rental - Pune Launch</title>
-        <meta name="description" content="Affordable, reliable car rental service launching in Pune. Download our app and get started!" />
+        <title>TriparCar | Premium Travel in Pune</title>
+        <meta name="description" content="Discover premium car rental services in Pune. Book now for a seamless experience!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;7&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
       </Head>
       <header className={styles.header}>
-        <div className={styles.logo}>Tripar Car Rental</div>
-        <nav>
+        <div className={styles.logo}>
+          <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
+          <p>Tripar Car Rental</p>
+        </div>
+        <nav className={styles.desktopNav}>
+          <Link href="/" className={styles.navLink}>Home</Link>
           <Link href="/about" className={styles.navLink}>About</Link>
           <Link href="/contact" className={styles.navLink}>Contact</Link>
           <Link href="/faq" className={styles.navLink}>FAQ</Link>
@@ -20,30 +30,135 @@ export default function Home() {
           <Link href="/privacy" className={styles.navLink}>Privacy</Link>
           <Link href="/help-center" className={styles.navLink}>Help Center</Link>
         </nav>
+        <div className={menuOpen ? `${styles.mobileMenuToggle} open` : styles.mobileMenuToggle} onClick={() => setMenuOpen(!menuOpen)}>
+          <span className={styles.hamburger}></span>
+          <span className={styles.hamburger}></span>
+          <span className={styles.hamburger}></span>
+        </div>
+        <div className={menuOpen ? `${styles.mobileDropdown} ${styles.open}` : styles.mobileDropdown}>
+          <Link href="/" className={styles.navLink}>Home</Link>
+          <Link href="/about" className={styles.navLink}>About</Link>
+          <Link href="/contact" className={styles.navLink}>Contact</Link>
+          <Link href="/faq" className={styles.navLink}>FAQ</Link>
+          <Link href="/terms" className={styles.navLink}>Terms</Link>
+          <Link href="/privacy" className={styles.navLink}>Privacy</Link>
+          <Link href="/help-center" className={styles.navLink}>Help Center</Link>
+        </div>
       </header>
       <main className={styles.main}>
         <section className={styles.hero}>
-          <h1>Car Rental Service Launching in Pune!</h1>
-          <p>Book cars instantly, enjoy affordable rates, and experience hassle-free travel with Tripar. Download our app to get started.</p>
-          <div className={styles.downloadLinks}>
-            <a href="#" className={styles.appBtn}>Download for Android</a>
-            <a href="#" className={styles.appBtn}>Download for iOS</a>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>
+              Discover Freedom with <span>Tripar</span> in Pune
+            </h1>
+            <p className={styles.heroSubtitle}>Experience premium car rentals with seamless booking and exclusive launch offers.</p>
+            <div className={styles.downloadLinks}>
+              <a href="#" className={styles.appBtn}>
+                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get Android App
+              </a>
+              <a href="#" className={styles.appBtn}>
+                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get iOS App
+              </a>
+            </div>
+          </div>
+          <div className={styles.heroImage}>
+            <Image src="/images/hero-car.png" alt="Premium Car" width={600} height={400} sizes="(max-width: 768px) 100vw, 45vw" style={{ width: '100%', height: 'auto', maxWidth: 600 }} />
           </div>
         </section>
         <section className={styles.features}>
-          <h2>Why Choose Tripar?</h2>
-          <ul>
-            <li>Wide range of cars for every need</li>
-            <li>Easy app-based booking & management</li>
-            <li>24/7 customer support</li>
-            <li>Transparent pricing, no hidden fees</li>
-            <li>Special launch offers for Pune</li>
-          </ul>
+          <h2 className={styles.featuresTitle}>Why <span>Tripar</span> Stands Out</h2>
+          <div className={styles.featureGrid}>
+            {[
+              { icon: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/car-front.svg", title: "Premium Fleet", desc: "Drive the latest models tailored to your style." },
+              { icon: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg", title: "Instant Booking", desc: "Book and manage your ride in seconds." },
+              { icon: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/headset.svg", title: "24/7 Concierge", desc: "Dedicated support whenever you need it." },
+              { icon: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/cash-stack.svg", title: "Clear Pricing", desc: "No surprises, just honest rates." },
+              { icon: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/gift.svg", title: "Exclusive Offers", desc: "Special deals for our Pune launch." },
+            ].map((feature, index) => (
+              <div key={index} className={styles.featureItem} style={{ animationDelay: `${index * 0.15}s` }}>
+                <img src={feature.icon} alt={`${feature.title} Icon`} className={styles.featureIcon} />
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className={styles.fleetSection}>
+          <h2 className={styles.sectionTitle}>Explore Our <span>Fleet</span></h2>
+          <div className={styles.fleetGrid}>
+            {[
+              { name: "Luxury Sedan", image: "/images/sedan.png", desc: "Perfect for business or leisure with premium comfort." },
+              { name: "Power Sedan", image: "/images/suv.png", desc: "Spacious sedan for family trips or city driving." },
+              { name: "Electric Compact", image: "/images/electric.png", desc: "Eco-friendly and efficient for city driving." },
+            ].map((car, index) => (
+              <div key={index} className={styles.fleetCard} style={{ animationDelay: `${index * 0.15}s` }}>
+                <Image src={car.image} alt={car.name} width={300} height={200} className={styles.fleetImage} sizes="(max-width: 768px) 100vw, 300px" />
+                <h3 className={styles.fleetName}>{car.name}</h3>
+                <p className={styles.fleetDesc}>{car.desc}</p>
+                <Link href="/book" className={styles.fleetBtn}>Book Now</Link>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className={styles.testimonials}>
+          <h2 className={styles.sectionTitle}>What Our <span>Customers</span> Say</h2>
+          <div className={styles.testimonialGrid}>
+            {[
+              { name: "Priya Sharma", quote: "Tripar made my trip in Pune seamless! The car was spotless, and the app was super easy to use.", rating: 5 },
+              { name: "Rohan Patel", quote: "Amazing service and transparent pricing. The 24/7 support was a game-changer!", rating: 4 },
+              { name: "Anita Desai", quote: "Loved the luxury sedan I rented. Tripar's launch offers are unbeatable!", rating: 5 },
+            ].map((testimonial, index) => (
+              <div key={index} className={styles.testimonialCard} style={{ animationDelay: `${index * 0.15}s` }}>
+                <p className={styles.testimonialQuote}>"{testimonial.quote}"</p>
+                <div className={styles.testimonialInfo}>
+                  <h4 className={styles.testimonialName}>{testimonial.name}</h4>
+                  <div className={styles.testimonialRating}>
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className={styles.ctaBanner}>
+          <h2 className={styles.ctaTitle}>Ready to Ride with TriparCars?</h2>
+          <p className={styles.ctaSubtitle}>Download the app now and get 20% off your first booking!</p>
+          <div className={styles.downloadLinks}>
+            <a href="#" className={styles.appBtn}>
+              <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get Android App
+            </a>
+            <a href="#" className={styles.appBtn}>
+              <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get iOS App
+            </a>
+          </div>
         </section>
       </main>
       <footer className={styles.footer}>
-        &copy; {new Date().getFullYear()} Tripar Car Rental. All rights reserved.
+        <div className={styles.footerContent}>
+          <p>© {new Date().getFullYear()} Tripar Car Rental. All rights reserved.</p>
+          <div className={styles.footerLinks}>
+            <Link href="/privacy" className={styles.navLink}>Privacy Policy</Link>
+            <Link href="/terms" className={styles.navLink}>Terms & Conditions</Link>
+            <Link href="/contact" className={styles.navLink}>Contact Us</Link>
+          </div>
+          <div className={styles.socialIcons}>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Twitter">
+              <FaTwitter className={styles.socialIconImage} />
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
+              <FaInstagram className={styles.socialIconImage} />
+            </a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="YouTube">
+              <FaYoutube className={styles.socialIconImage} />
+            </a>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="WhatsApp">
+              <FaWhatsapp className={styles.socialIconImage} />
+            </a>
+          </div>
+        </div>
       </footer>
-    </>
+    </div>
   );
 }
