@@ -55,7 +55,7 @@ export default function Terms() {
             <h2 className={styles.orangeTitle}>Key Terms</h2>
             <ul className={styles.orangeText}>
               <li><strong>Booking:</strong> All bookings are subject to availability and confirmation.</li>
-              <li><strong>Driver's License:</strong> A valid license is required for all drivers.</li>
+              <li><strong>Driver&apos;s License:</strong> A valid license is required for all drivers.</li>
               <li><strong>Payment:</strong> Full payment must be made before vehicle handover.</li>
               <li><strong>Cancellation:</strong> Free cancellation up to 24 hours before pickup.</li>
               <li><strong>Responsibility:</strong> Renters are responsible for any damage during the rental period.</li>

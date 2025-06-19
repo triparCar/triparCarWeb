@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { FaMobileAlt, FaTwitter, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 
 export default function Home() {
@@ -76,7 +76,7 @@ export default function Home() {
               { icon: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/gift.svg", title: "Exclusive Offers", desc: "Special deals for our Pune launch." },
             ].map((feature, index) => (
               <div key={index} className={styles.featureItem} style={{ animationDelay: `${index * 0.15}s` }}>
-                <img src={feature.icon} alt={`${feature.title} Icon`} className={styles.featureIcon} />
+                <Image src={feature.icon} alt={`${feature.title} Icon`} className={styles.featureIcon} width={32} height={32} />
                 <h3>{feature.title}</h3>
                 <p>{feature.desc}</p>
               </div>
@@ -109,7 +109,7 @@ export default function Home() {
               { name: "Anita Desai", quote: "Loved the luxury sedan I rented. Tripar's launch offers are unbeatable!", rating: 5 },
             ].map((testimonial, index) => (
               <div key={index} className={styles.testimonialCard} style={{ animationDelay: `${index * 0.15}s` }}>
-                <p className={styles.testimonialQuote}>"{testimonial.quote}"</p>
+                <p className={styles.testimonialQuote}>&quot;{testimonial.quote}&quot;</p>
                 <div className={styles.testimonialInfo}>
                   <h4 className={styles.testimonialName}>{testimonial.name}</h4>
                   <div className={styles.testimonialRating}>

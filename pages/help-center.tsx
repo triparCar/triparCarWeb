@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../styles/HelpCenter.module.css";
 import { useState } from "react";
 import { FaTwitter, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
 
 export default function HelpCenter() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,7 +63,7 @@ export default function HelpCenter() {
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/car-front.svg" alt="Tripar Logo" width={36} height={36} />
+          <Image src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/car-front.svg" alt="Tripar Logo" width={36} height={36} />
           TriparCars
         </div>
         <nav className={styles.desktopNav}>
@@ -113,7 +113,7 @@ export default function HelpCenter() {
             {filteredTopics.length > 0 ? (
               filteredTopics.map((topic, index) => (
                 <div key={index} className={styles.supportCard}>
-                  <img src={topic.icon} alt={`${topic.title} Icon`} className={styles.supportIcon} />
+                  <Image src={topic.icon} alt={`${topic.title} Icon`} className={styles.supportIcon} width={32} height={32} />
                   <h3 className={styles.supportTitle}>{topic.title}</h3>
                   <p className={styles.supportDescription}>{topic.description}</p>
                 </div>

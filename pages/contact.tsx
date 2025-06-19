@@ -49,7 +49,7 @@ export default function Contact() {
         <section className={styles.hero}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Get in Touch</h1>
-            <p className={styles.heroSubtitle}>We're here to answer your questions and assist you.</p>
+            <p className={styles.heroSubtitle}>We&apos;re here to answer your questions and assist you.</p>
           </div>
         </section>
         <section className={styles.contactSection}>
@@ -91,11 +91,11 @@ export default function Contact() {
           <div className={styles.contactInfo}>
             <h3 className={styles.infoTitle}>Contact Information</h3>
             <p className={styles.infoItem}>
-              <img src="/icons/email.svg" alt="Email Icon" className={styles.contentIcon} />
+              <Image src="/icons/email.svg" alt="Email Icon" className={styles.contentIcon} width={24} height={24} />
               Email: <a href="mailto:support@triparcar.com">support@triparcar.com</a>
             </p>
             <p className={styles.infoItem}>
-              <img src="/icons/phone.svg" alt="Phone Icon" className={styles.contentIcon} />
+              <Image src="/icons/phone.svg" alt="Phone Icon" className={styles.contentIcon} width={24} height={24} />
               Phone: +91-123-456-7890
             </p>
           </div>

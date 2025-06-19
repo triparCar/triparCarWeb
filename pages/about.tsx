@@ -54,14 +54,14 @@ export default function About() {
         </section>
         <section className={styles.content}>
           <div className={styles.contentItem}>
-            <img src="/icons/compass.svg" alt="Mission Icon" className={styles.contentIcon} />
+            <Image src="/icons/compass.svg" alt="Mission Icon" className={styles.contentIcon} width={48} height={48} />
             <h2 className={styles.contentTitle}>Our Mission</h2>
             <p>At TriparCar, we strive to make car rentals effortless, affordable, and luxurious. Launched in Pune, we provide a premium fleet and a seamless app-based experience to elevate your travel.</p>
           </div>
           <div className={styles.contentItem}>
-            <img src="/icons/telescope.svg" alt="Vision Icon" className={styles.contentIcon} />
+            <Image src="/icons/telescope.svg" alt="Vision Icon" className={styles.contentIcon} width={48} height={48} />
             <h2 className={styles.contentTitle}>Our Vision</h2>
-            <p>To lead India's car rental industry with innovative technology, transparent pricing, and exceptional customer service, making travel accessible to all.</p>
+            <p>To lead India&apos;s car rental industry with innovative technology, transparent pricing, and exceptional customer service, making travel accessible to all.</p>
           </div>
         </section>
         <section className={styles.teamSection}>
