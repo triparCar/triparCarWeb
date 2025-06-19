@@ -19,7 +19,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.logo}>
           <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
-          <p>Tripar Car Rental</p>
+          <p>Tripar Car</p>
         </div>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>

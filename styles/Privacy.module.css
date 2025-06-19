@@ -1,18 +1,6 @@
 /* Privacy.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap');
 
-:root {
-  --primary: #FF7700;
-  --primary-dark: #E05D00;
-  --light: #FFF8F0;
-  --dark: #1A1A1A;
-  --gray: #6B7280;
-  --white: #FFFFFF;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  --shadow-hover: 0 15px 45px rgba(0, 0, 0, 0.25);
-  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 .page {
   display: grid;
   grid-template-rows: auto 1fr auto;
