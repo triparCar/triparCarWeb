@@ -95,9 +95,9 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>Explore Our <span>Fleet</span></h2>
           <div className={styles.fleetGrid}>
             {[
-              { name: "Luxury Sedan", image: "/images (1).jfif", desc: "Perfect for business or leisure with premium comfort." },
-              { name: "Power Sedan", image: "/images (2).jfif", desc: "Spacious sedan for family trips or city driving." },
-              { name: "Electric Compact", image: "/images (3).jfif", desc: "Eco-friendly and efficient for city driving." },
+              { name: "Luxury Sedan", image: "/images (1).webp", desc: "Perfect for business or leisure with premium comfort." },
+              { name: "Power Sedan", image: "/images (2).webp", desc: "Spacious sedan for family trips or city driving." },
+              { name: "Electric Compact", image: "/images (3).webp", desc: "Eco-friendly and efficient for city driving." },
             ].map((car, index) => (
               <div key={index} className={styles.fleetCard} style={{ animationDelay: `${index * 0.15}s` }}>
                 <Image src={car.image} alt={car.name} width={300} height={200} className={styles.fleetImage} sizes="(max-width: 768px) 100vw, 300px" />
