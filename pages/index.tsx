@@ -53,11 +53,19 @@ export default function Home() {
             </h1>
             <p className={styles.heroSubtitle}>Experience premium car rentals with seamless booking and exclusive launch offers.</p>
             <div className={styles.downloadLinks}>
-              <a href="#" className={styles.appBtn}>
-                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get Android App
+              <a href="#" className={styles.appBtn} style={{padding: 0, background: 'none', boxShadow: 'none', display: 'inline-block'}}>
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  style={{height: '48px', width: 'auto', display: 'block'}}
+                />
               </a>
-              <a href="#" className={styles.appBtn}>
-                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get iOS App
+              <a href="#" className={styles.appBtn} style={{padding: 0, background: 'none', boxShadow: 'none', display: 'inline-block'}}>
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                  style={{height: '48px', width: 'auto', display: 'block'}}
+                />
               </a>
             </div>
           </div>
@@ -126,11 +134,19 @@ export default function Home() {
           <h2 className={styles.ctaTitle}>Ready to Ride with TriparCars?</h2>
           <p className={styles.ctaSubtitle}>Download the app now and get 20% off your first booking!</p>
           <div className={styles.downloadLinks}>
-            <a href="#" className={styles.appBtn}>
-              <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get Android App
+            <a href="#" className={styles.appBtn} style={{padding: 0, background: 'none', boxShadow: 'none', display: 'inline-block'}}>
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                style={{height: '48px', width: 'auto', display: 'block'}}
+              />
             </a>
-            <a href="#" className={styles.appBtn}>
-              <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/phone.svg" alt="Phone Icon" className={styles.appBtnIcon} /> Get iOS App
+            <a href="#" className={styles.appBtn} style={{padding: 0, background: 'none', boxShadow: 'none', display: 'inline-block'}}>
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                style={{height: '48px', width: 'auto', display: 'block'}}
+              />
             </a>
           </div>
         </section>
