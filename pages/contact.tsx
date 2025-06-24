@@ -115,16 +115,16 @@ export default function Contact() {
             Back to Top
           </button>
           <div className={styles.socialIcons}>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Twitter">
+            <a href="https://twitter.com/Triparcars" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Twitter">
               <FaTwitter className={styles.socialIconImage} color="#fff" />
             </a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
+            <a href="https://instagram.com/tripar_cars" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
               <FaInstagram className={styles.socialIconImage} color="#fff" />
             </a>
             <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="YouTube">
               <FaYoutube className={styles.socialIconImage} color="#fff" />
             </a>
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="WhatsApp">
+            <a href="https://wa.me/918208322782" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="WhatsApp">
               <FaWhatsapp className={styles.socialIconImage} color="#fff" />
             </a>
           </div>
