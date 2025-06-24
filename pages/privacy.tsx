@@ -11,15 +11,17 @@ export default function Privacy() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>Privacy Policy | Tripar Car Rental</title>
-        <meta name="description" content="Learn how Tripar Car Rental safeguards your personal information." />
+        <title>Privacy Policy | TriparCars</title>
+        <meta name="description" content="Learn how  TriparCars safeguards your personal information." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=svg" rel="stylesheet" />
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
-          Tripar Car Rental
+          <Link href="/" className={styles.logo} style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+            <Image src="/logo.png" alt="Tripar Logo" width={44} height={44} />
+            TriparCars
+          </Link>
         </div>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>
@@ -73,7 +75,7 @@ export default function Privacy() {
       </main>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p>© {new Date().getFullYear()} Tripar Car Rental. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}  TriparCars. All rights reserved.</p>
           <div className={styles.footerLinks}>
             <Link href="/privacy" className={styles.navLink}>Privacy Policy</Link>
             <Link href="/terms" className={styles.navLink}>Terms & Conditions</Link>

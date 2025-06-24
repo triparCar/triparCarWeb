@@ -63,8 +63,10 @@ export default function HelpCenter() {
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/car-front.svg" alt="Tripar Logo" width={36} height={36} />
-          TriparCars
+          <Link href="/" className={styles.logo} style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+            <Image src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/car-front.svg" alt="Tripar Logo" width={44} height={44} />
+            TriparCars
+          </Link>
         </div>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>

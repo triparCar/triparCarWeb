@@ -12,7 +12,7 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "How do I book a car with Tripar?",
+      question: "How do I book a car with  TriparCars?",
       answer: "Download our mobile app from the App Store or Google Play, create an account, select your desired car, choose the rental period, and complete the booking process with payment. You'll receive a confirmation instantly.",
     },
     {
@@ -20,7 +20,7 @@ export default function FAQ() {
       answer: "You need a valid driving license, a government-issued ID proof (such as Aadhaar or Passport), and a credit/debit card for the security deposit.",
     },
     {
-      question: "Where is Tripar Car Rental available?",
+      question: "Where is  TriparCars available?",
       answer: "We are currently operational in Pune, with plans to expand to other major cities across India soon. Check our app for the latest updates on service areas.",
     },
     {
@@ -28,7 +28,7 @@ export default function FAQ() {
       answer: (
         <>
           You can reach us via email at{" "}
-          <a href="mailto:support@triparcar.com">support@triparcar.com</a> or call our helpline at +91-123-456-7890. Our support team is available 24/7.
+          <a href="mailto:askselfrental@gmail.com">askselfrental@gmail.com</a> or call our helpline at +91-123-456-7890. Our support team is available 24/7.
         </>
       ),
     },
@@ -57,15 +57,17 @@ export default function FAQ() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>FAQ - Tripar Car Rental</title>
-        <meta name="description" content="Find answers to frequently asked questions about Tripar Car Rental's services, bookings, and policies." />
+        <title>FAQ -  TriparCars</title>
+        <meta name="description" content="Find answers to frequently asked questions about  TriparCars's services, bookings, and policies." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
-          Tripar Car Rental
+          <Link href="/" className={styles.logo} style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+            <Image src="/logo.png" alt="Tripar Logo" width={44} height={44} />
+            Tripar Car Rental
+          </Link>
         </div>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>
@@ -94,7 +96,7 @@ export default function FAQ() {
       <main className={styles.main}>
         <section className={styles.hero}>
           <h1 className={styles.heroTitle}>Frequently Asked Questions</h1>
-          <p className={styles.heroSubtitle}>Find answers to your questions about Tripar Car Rental.</p>
+          <p className={styles.heroSubtitle}>Find answers to your questions about TriparCars.</p>
           <div className={styles.searchContainer}>
             <input
               type="text"
@@ -130,7 +132,7 @@ export default function FAQ() {
       </main>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p>© {new Date().getFullYear()} Tripar Car Rental. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}  TriparCars. All rights reserved.</p>
           <div className={styles.footerLinks}>
             <Link href="/privacy" className={styles.navLink}>Privacy Policy</Link>
             <Link href="/terms" className={styles.navLink}>Terms & Conditions</Link>

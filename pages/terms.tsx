@@ -11,16 +11,16 @@ export default function Terms() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>Terms & Conditions | Tripar Car Rental</title>
-        <meta name="description" content="Understand the terms for using Tripar Car Rental services." />
+        <title>Terms & Conditions |  TriparCars</title>
+        <meta name="description" content="Understand the terms for using  TriparCars services." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=svg" rel="stylesheet" />
       </Head>
       <header className={styles.header}>
-        <div className={styles.logo}>
-          <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
-          Tripar Car Rental
-        </div>
+        <Link href="/" className={styles.logo} style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+          <Image src="/logo.png" alt="Tripar Logo" width={44} height={44} />
+          TriparCars
+        </Link>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>
           <Link href="/about" className={styles.navLink}>About</Link>
@@ -68,13 +68,13 @@ export default function Terms() {
           <div className={styles.contentItem}>
             <FaFileContract className={styles.contentIcon} /> {/* Replace with <img src="/icons/contract.svg" alt="Contract Icon" className={styles.contentIcon} /> */}
             <h2>Our Agreement</h2>
-            <p>By booking with Tripar, you agree to our terms. Please review them carefully. (Full terms coming soon.)</p>
+            <p>By booking with  TriparCars, you agree to our terms. Please review them carefully. (Full terms coming soon.)</p>
           </div>
         </section>
       </main>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p>© {new Date().getFullYear()} Tripar Car Rental. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}  TriparCars. All rights reserved.</p>
           <div className={styles.footerLinks}>
             <Link href="/privacy" className={styles.navLink}>Privacy Policy</Link>
             <Link href="/terms" className={styles.navLink}>Terms & Conditions</Link>

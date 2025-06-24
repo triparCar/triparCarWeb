@@ -18,8 +18,8 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
-          <p>Tripar Car</p>
+          <Image src="/logo.png" alt="Triparcar Logo" width={36} height={36} />
+          <p> TriparCars</p>
         </div>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>
@@ -49,7 +49,7 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              Discover Freedom with <span>Tripar</span> in Pune
+              Discover Freedom with <span> TriparCars</span> in Pune
             </h1>
             <p className={styles.heroSubtitle}>Experience premium car rentals with seamless booking and exclusive launch offers.</p>
             <div className={styles.downloadLinks}>
@@ -62,7 +62,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.heroImage}>
-            <Image src="/images/hero-car.png" alt="Premium Car" width={600} height={400} sizes="(max-width: 768px) 100vw, 45vw" style={{ width: '100%', height: 'auto', maxWidth: 600 }} />
+            <Image src="/image.png" alt="Premium Car image" width={600} height={400} sizes="(max-width: 768px) 100vw, 45vw" style={{ width: '100%', height: 'auto', maxWidth: 600 }} />
           </div>
         </section>
         <section className={styles.features}>
@@ -87,9 +87,9 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>Explore Our <span>Fleet</span></h2>
           <div className={styles.fleetGrid}>
             {[
-              { name: "Luxury Sedan", image: "/images/sedan.png", desc: "Perfect for business or leisure with premium comfort." },
-              { name: "Power Sedan", image: "/images/suv.png", desc: "Spacious sedan for family trips or city driving." },
-              { name: "Electric Compact", image: "/images/electric.png", desc: "Eco-friendly and efficient for city driving." },
+              { name: "Luxury Sedan", image: "/images (1).jfif", desc: "Perfect for business or leisure with premium comfort." },
+              { name: "Power Sedan", image: "/images (2).jfif", desc: "Spacious sedan for family trips or city driving." },
+              { name: "Electric Compact", image: "/images (3).jfif", desc: "Eco-friendly and efficient for city driving." },
             ].map((car, index) => (
               <div key={index} className={styles.fleetCard} style={{ animationDelay: `${index * 0.15}s` }}>
                 <Image src={car.image} alt={car.name} width={300} height={200} className={styles.fleetImage} sizes="(max-width: 768px) 100vw, 300px" />
@@ -137,7 +137,7 @@ export default function Home() {
       </main>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p>© {new Date().getFullYear()} Tripar Car Rental. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}  TriparCars. All rights reserved.</p>
           <div className={styles.footerLinks}>
             <Link href="/privacy" className={styles.navLink}>Privacy Policy</Link>
             <Link href="/terms" className={styles.navLink}>Terms & Conditions</Link>

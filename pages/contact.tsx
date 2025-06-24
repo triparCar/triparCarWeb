@@ -11,15 +11,17 @@ export default function Contact() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>Contact Us | Tripar Car Rental</title>
-        <meta name="description" content="Reach out to Tripar Car Rental for support or inquiries." />
+        <title>Contact Us |  TriparCars</title>
+        <meta name="description" content="Reach out to TriparCars for support or inquiries." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=svg" rel="stylesheet" />
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
-          Tripar Car Rental
+          <Link href="/" className={styles.logo} style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+            <Image src="/logo.png" alt="Tripar Logo" width={44} height={44} />
+            TriparCars
+          </Link>
         </div>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>
@@ -91,11 +93,11 @@ export default function Contact() {
           <div className={styles.contactInfo}>
             <h3 className={styles.infoTitle}>Contact Information</h3>
             <p className={styles.infoItem}>
-              <Image src="/icons/email.svg" alt="Email Icon" className={styles.contentIcon} width={24} height={24} />
-              Email: <a href="mailto:support@triparcar.com">support@triparcar.com</a>
+              <Image src="/email.svg" alt="Email Icon" className={styles.contentIcon} width={24} height={24} />
+              Email: <a href="mailto:askselfrental@gmail.com">askselfrental@gmail.com</a>
             </p>
             <p className={styles.infoItem}>
-              <Image src="/icons/phone.svg" alt="Phone Icon" className={styles.contentIcon} width={24} height={24} />
+              <Image src="/phone-call.svg" alt="Phone Icon" className={styles.contentIcon} width={24} height={24} />
               Phone: +91-123-456-7890
             </p>
           </div>
@@ -103,7 +105,7 @@ export default function Contact() {
       </main>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p>© {new Date().getFullYear()} Tripar Car Rental. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}   TriparCars. All rights reserved.</p>
           <div className={styles.footerLinks}>
             <Link href="/privacy" className={styles.navLink}>Privacy Policy</Link>
             <Link href="/terms" className={styles.navLink}>Terms & Conditions</Link>

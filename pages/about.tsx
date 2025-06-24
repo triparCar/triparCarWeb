@@ -18,8 +18,10 @@ export default function About() {
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="Tripar Logo" width={36} height={36} />
-          TriparCars
+          <Link href="/" className={styles.logo} style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+            <Image src="/logo.png" alt="Tripar Logo" width={44} height={44} />
+            TriparCars
+          </Link>
         </div>
         <nav className={styles.desktopNav}>
           <Link href="/" className={styles.navLink}>Home</Link>
@@ -54,12 +56,12 @@ export default function About() {
         </section>
         <section className={styles.content}>
           <div className={styles.contentItem}>
-            <Image src="/icons/compass.svg" alt="Mission Icon" className={styles.contentIcon} width={48} height={48} />
+            <Image src="/mission.png" alt="Mission Icon" className={styles.contentIcon} width={48} height={48} />
             <h2 className={styles.contentTitle}>Our Mission</h2>
             <p>At TriparCar, we strive to make car rentals effortless, affordable, and luxurious. Launched in Pune, we provide a premium fleet and a seamless app-based experience to elevate your travel.</p>
           </div>
           <div className={styles.contentItem}>
-            <Image src="/icons/telescope.svg" alt="Vision Icon" className={styles.contentIcon} width={48} height={48} />
+            <Image src="/telescope.svg" alt="Vision Icon" className={styles.contentIcon} width={48} height={48} />
             <h2 className={styles.contentTitle}>Our Vision</h2>
             <p>To lead India&apos;s car rental industry with innovative technology, transparent pricing, and exceptional customer service, making travel accessible to all.</p>
           </div>
@@ -68,17 +70,17 @@ export default function About() {
           <h2 className={styles.sectionTitle}>Our Team</h2>
           <div className={styles.teamGrid}>
             <div className={styles.teamMember}>
-              <Image src="/team/john.jpg" alt="John Doe" width={200} height={200} className={styles.teamImage} />
+             {/* <Image src="/team/john.jpg" alt="John Doe" width={200} height={200} className={styles.teamImage} /> */}
               <h3 className={styles.teamName}>Abhishek Deshpande</h3>
               <p className={styles.teamRole}>CEO & Founder</p>
             </div>
             <div className={styles.teamMember}>
-              <Image src="/team/jane.jpg" alt="Jane Smith" width={200} height={200} className={styles.teamImage} />
+ {/* <Image src="/team/john.jpg" alt="John Doe" width={200} height={200} className={styles.teamImage} /> */}
               <h3 className={styles.teamName}>Sahil Pawar</h3>
               <p className={styles.teamRole}>COO</p>
             </div>
             <div className={styles.teamMember}>
-              <Image src="/team/alex.jpg" alt="Alex Johnson" width={200} height={200} className={styles.teamImage} />
+              {/* <Image src="/team/john.jpg" alt="John Doe" width={200} height={200} className={styles.teamImage} /> */}
               <h3 className={styles.teamName}>Sahil Pawar</h3>
               <p className={styles.teamRole}>Head of Technology</p>
             </div>
